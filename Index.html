@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <form id="form" class="form">
+        <h2>CADASTRO FORNECEDOR/PRODUTO</h2>
+        <header>
+            Dados do Fornecedor
+        </header>
+            <fieldset>
+                <div class="input-group w50">
+                    <label for="razaoSocial">Razão Social</label>
+                    <input id="razaoSocial" type="text" name="razaoSocial" required>
+                </div>
+                
+                <div class="input-group w50">
+                    <label for="CNPJ">CNPJ</label>
+                    <input id="CNPJ" type="text" name="CNPJ" required>
+                </div>
+                
+                <div class="input-group w60">
+                    <label for="nomeFantasia">Nome Fantasia</label>
+                    <input id="nomeFantasia" type="text" name="nomeFantasia" required>
+                </div>
+                
+                <div class="input-group w60">
+                    <label for="inscricaoEstadual">Inscrição Estadual</label>
+                    <input id="inscricaoEstadual" type="text" name="inscricaoEstadual">
+                </div>
+                
+                <div class="input-group w70">
+                    <label for="CEP">CEP</label>
+                    <input id="CEP" type="text" maxlength="9" name="CEP" required>
+                </div>
+
+                <div class="input-group w70">
+                    <label for="inscricaoMunicipal">Inscrição Municipal</label>
+                    <input id="inscricaoMunicipal" type="text" name="inscricaoMunicipal">
+                </div>
+                
+                <div class="input-group w80">
+                    <label for="endereco">Endereço</label>
+                    <input id="endereco" type="text" name="endereco" required>
+                </div>
+                
+                <div class="input-group w80">
+                    <label for="numero">Número</label>
+                    <input id="numero" type="number" name="numero" required>
+                </div>
+                
+                <div>
+                    <label for="complemento">Complemento</label>
+                    <input id="complemento" type="text" name="complemento">
+                </div>
+            
+                <div class="input-group a3">
+                    <label for="bairro">Bairro</label>
+                    <input id="bairro" type="text" name="bairro" required>
+                </div>
+
+                <div class="input-group a3">
+                    <label for="municipio">Município</label>
+                    <input id="municipio" type="text" name="municipio" required>
+                </div>
+
+                <div class="input-group a3">
+                    <label for="estado">Estado</label>
+                    <input id="estado" type="text" name="estado" required>
+                </div>
+                
+                <div class="input-group b3">
+                    <label for="pessoaContato">Nome da pessoa de Contato</label>
+                    <input id="pessoaContato" type="text" name="pessoaContato" required>
+                </div>
+                
+                <div class="input-group b3">
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" type="text" name="telefone" required>
+                </div>
+                
+                <div class="input-group b3">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="text" name="email" required>
+                </div>
+            </fieldset>
+        </div>
+        <header>
+            Produtos
+        </header>
+        <div>
+            <fieldset>
+                <div id="productModal" class="modal"></div>
+                    <div class="modal-content">
+                        <span class="close" id="closeModal">&times;</span>
+                        <div>
+                            <label for="productName">Produto:</label>             
+                            <input type="text" id="productName">
+                        </div>
+                        <div>
+                            <label for="uniMedida">UNI. Medida</label>
+                            <input type="text" id="uniMedida">
+                        </div>
+                        <div>
+                            <label for="qtdEstoque">QTD Estoque</label>
+                            <input type="number" id="qtdEstoque">
+                        </div>
+                            <label for="valUnit">Valor Unitário</label>
+                            <input type="number" id="valUnit" step="0.01" min="0.01">
+                        </div>
+                        <button id="openModal">Adicionar Produtos</button>
+                    </div>
+            </fieldset>
+        </div>
+        <header>
+            Anexos
+        </header>
+        <div>
+            <fieldset>
+                <input id="adicionarAnexo" type="file" newAnexo()>Adicionar Anexos</input>
+            </fieldset>
+        </div>
+        <div>
+            <button id="salvarFornecedor">Salvar Fornecedor</button>
+        </div>
+    </form>
+
+    <script type="text/js" src="Script.js"></script>    
+</body>
+</html>
